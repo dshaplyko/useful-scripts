@@ -18,4 +18,43 @@ decisionPccs = responseWithLP.decisions.reduce((result, item) => {
   return result;
 }, []);
 
+/**
+ * Check if there are duplicates
+ */
+const hasDuplicates = array => (new Set(array)).size !== array.length;
 
+/**
+ * Calculate the number of occurences in the given string
+ */
+const count = (main_str, sub_str) =>  {
+  main_str += '';
+  sub_str += '';
+
+  if (sub_str.length <= 0) {
+    return main_str.length + 1;
+  }
+  subStr = sub_str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return (main_str.match(new RegExp(subStr, 'gi')) || []).length;
+};
+
+/**
+ * Remove duplicates from the array
+ * ids - array with duplicates
+ */
+const filtered = Array.from(new Set(ids));
+
+/**
+ * Get unique items by providing the key
+ */
+
+const getUnique = (arr, comp) => {
+
+  const unique = arr
+       .map(e => e[comp])
+      // store the keys of the unique objects
+      .map((e, i, final) => final.indexOf(e) === i && i)
+      // eliminate the dead keys & store unique objects
+      .filter(e => arr[e]).map(e => arr[e]);
+
+   return unique;
+};
