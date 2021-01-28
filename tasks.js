@@ -26,3 +26,8 @@ function findMinIndex(arr) {
 }
 
 findMinIndex(numbers); //should print 4
+
+/**
+* calculate the squre of the room
+*/
+const flatRooms = [{l: 5, w: 6}, {l:8, w: 6}, {l: 7, w:5}];
