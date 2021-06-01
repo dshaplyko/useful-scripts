@@ -28,10 +28,23 @@ function findMinIndex(arr) {
 findMinIndex(numbers); //should print 4
 
 /**
+ * Calculate a century by given year if a number is passed
+ * @param {number} year
+ * @return {num} century
+ * @example
+ * console.log(centuryFromYear(1705)) // 18
+ * console.log(centuryFromYear(1900)) // 19
+ * console.log(centuryFromYear(1601)) // 17
+ */
+function centuryFromYear(year) {
+
+}
+
+/**
  * Write functions:
- * 1. To return a room where the square is max
- * 2. To calculate the square of the room
- * 3. To return a count of unique rooms
+ * 1. To return the max square (optionally: name of the room)
+ * 2. To calculate the square of the apartment
+ * 3. To return a count of unique room's names
  */
 const apartment = [{
   name: "bathroom",
@@ -50,7 +63,6 @@ const apartment = [{
   length: 6,
   width: 3
 }];
-
 
 describe('Test suite', () => {
 
