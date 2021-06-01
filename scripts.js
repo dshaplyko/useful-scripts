@@ -43,7 +43,6 @@ const count = (main_str, sub_str) => {
  */
 const arr = [1, 2, 3, 4, 1, 4, 1, 5, 1, 6];
 const filtered = [...new Set(arr)];
-console.log(filtered);
 
 /**
  * Get unique items by providing the key

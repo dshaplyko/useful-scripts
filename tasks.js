@@ -28,6 +28,7 @@ function findMinIndex(arr) {
 findMinIndex(numbers); //should print 4
 
 /**
+<<<<<<< Updated upstream
  * Calculate a century by given year if a number is passed
  * @param {number} year
  * @return {num} century
@@ -82,3 +83,19 @@ describe('Test suite', () => {
   });
 
 });
+
+const promiseOne = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('FIRST!');
+    }, 1000);
+  });
+};
+
+const promiseTwo = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('SECOND!');
+    }, 500);
+  });
+};
