@@ -26,7 +26,7 @@ const hasDuplicates = array => (new Set(array)).size !== array.length;
 /**
  * Calculate the number of occurences in the given string
  */
-const count = (main_str, sub_str) =>  {
+const count = (main_str, sub_str) => {
   main_str += '';
   sub_str += '';
 
@@ -41,7 +41,9 @@ const count = (main_str, sub_str) =>  {
  * Remove duplicates from the array
  * ids - array with duplicates
  */
-const filtered = Array.from(new Set(ids));
+const arr = [1, 2, 3, 4, 1, 4, 1, 5, 1, 6];
+const filtered = [...new Set(arr)];
+console.log(filtered);
 
 /**
  * Get unique items by providing the key
@@ -50,11 +52,11 @@ const filtered = Array.from(new Set(ids));
 const getUnique = (arr, comp) => {
 
   const unique = arr
-       .map(e => e[comp])
-      // store the keys of the unique objects
-      .map((e, i, final) => final.indexOf(e) === i && i)
-      // eliminate the dead keys & store unique objects
-      .filter(e => arr[e]).map(e => arr[e]);
+    .map(e => e[comp])
+    // store the keys of the unique objects
+    .map((e, i, final) => final.indexOf(e) === i && i)
+    // eliminate the dead keys & store unique objects
+    .filter(e => arr[e]).map(e => arr[e]);
 
-   return unique;
+  return unique;
 };
